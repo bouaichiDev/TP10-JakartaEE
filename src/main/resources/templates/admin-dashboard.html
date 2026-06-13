@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Espace Administrateur</h2>
+<p>Section réservée aux utilisateurs ayant le rôle ADMIN.
+
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Déconnexion</button>
+</form></body>
+</html>

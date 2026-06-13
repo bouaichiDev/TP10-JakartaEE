@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+</head>
+<body>
+<h2>Bienvenue dans l’application sécurisée</h2>
+<p>Connexion réussie ! Choisissez votre espace :
+<p>Connecté: <span sec:authentication="name">user</span></p>
+
+<ul>
+    <li><a th:href="@{/user/dashboard}">Espace Utilisateur</a></li>
+    <li><a th:href="@{/admin/dashboard}">Espace Administrateur</a></li>
+</ul>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Déconnexion</button>
+</form>
+ </body>
+</html>
